@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0px;
@@ -18,7 +18,7 @@ strong.titulo-destaque{
 }
 
 .apresentacao{
-    margin: 10%;
+    margin: 10% 20%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,6 +26,9 @@ strong.titulo-destaque{
 
 .apresentacao__conteudo{
     width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .apresentacao__conteudo__titulo{
@@ -43,4 +46,17 @@ strong.titulo-destaque{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.apresentacao__links__link{
+    background-color: #22d4fd;
+    width: 280px;
+    padding: 21.5px 0px;
+    border-radius: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    text-align: center;
 }
