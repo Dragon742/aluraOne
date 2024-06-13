@@ -8,14 +8,21 @@ for(let contador = 0; contador < lista_teclas.length; contador++){
     tecla.onclick = function(){
         tocar_som(idAudio);
     }
-    tecla.onkeydown = function(){
-        tecla.classList.add("ativa");
+    tecla.onkeydown = function(evento){
+        if(evento.code=="Enter" || evento.code=="Space"){
+            tecla.classList.add("ativa");
+        }
     }
     tecla.onkeyup = function(){
         tecla;this.classList.remove("ativa");
     }
 }
 
-function tocar_som(idElementoAudio){
-    document.querySelector(idElementoAudio).play();
+function tocar_som(seletorAudio){
+    const elemento = document.querySelector(seletorAudio);
+    if(elemento.localName === "audio" && elemento.localName != null){
+        elemento.play();
+    }else{
+        console.log('Elemento não encontrado ou seletor inválido');
+    }
 }
